@@ -1,5 +1,6 @@
 ﻿CREATE PROCEDURE sp_dimDate (
-	@DayNumberOfWeek		int
+	@DayNumberOfWeek		int,
+    @DayNumberOfMonth       int
 )
 as
 begin
@@ -25,4 +26,5 @@ SELECT  [DateKey]
       ,[FiscalSemester]
   FROM [AdventureWorksDW2016].[dbo].[DimDate]
   where [DayNumberOfWeek] = @DayNumberOfWeek	
+  and [DayNumberOfMonth] = @DayNumberOfMonth
   end
